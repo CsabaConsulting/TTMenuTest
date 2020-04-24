@@ -1,0 +1,81 @@
+﻿body.main-body {
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.center-block-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline-blue {
+    color: #0064C3;
+}
+
+/* original navbar-inverse color pair: 337ab7 2b669a */
+
+.navbar-inverse {
+  background-image: -webkit-linear-gradient(top, #11283d 0%, #0e2233 100%);
+  background-image:      -o-linear-gradient(top, #11283d 0%, #0e2233 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#11283d), to(#0e2233));
+  background-image:         linear-gradient(to bottom, #11283d 0%, #0e2233 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff11283d', endColorstr='#ff0e2233', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+}
+
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .active > a {
+  background-image: -webkit-linear-gradient(top, #193d5b 0%, #15334d 100%);
+  background-image:      -o-linear-gradient(top, #193d5b 0%, #15334d 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#193d5b), to(#15334d));
+  background-image:         linear-gradient(to bottom, #193d5b 0%, #15334d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff193d5b', endColorstr='#ff15334d', GradientType=0);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
+}
+
+.popover {
+    max-width: 500px;
+    width: 500px;
+}
+
+.dropdown-menu {
+    max-width: 600px !important;
+}
+
+.logo-sm {
+    font-size: 13px;
+}
+
+.footer-sm {
+    font-size: 9px;
+}
+
+@media (max-width: 992px) {
+    #refresh-menu {
+        display: none;
+    }
+
+    #navbar-container {
+        width: 97vw;
+    }
+}

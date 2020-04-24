@@ -1,0 +1,16 @@
+﻿.tablePartContainer {
+    position: relative;
+}
+
+.floatingEditContainer {
+    position: absolute;
+}
+
+.sgedit {
+    border: 1px solid grey;
+    padding-top: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+}

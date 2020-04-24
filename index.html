@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="TT Menu test">
+    <meta name="author" content="Csaba Toth">
+
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>Menu Test - TT&reg; Application</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/Footer.css" rel="stylesheet">
+    <link href="css/Site.css" rel="stylesheet">
+    <link href="css/WideTable.css" rel="stylesheet">
+    <link href="css/EditableTable.css" rel="stylesheet">
+
+    <script src="js/modernizr-2.8.3.js"></script>
+</head>
+<body id="the-body" class="main-body">
+    <div id="navbar-container-container" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div id="navbar-container" class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://app.thruthink.com/">TT<sup class="logo-sm">®</sup></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li id="refresh-menu">
+                        <a href="#" onclick="location.reload();" title="Refresh page">Refresh</a> 
+                    </li>
+                    <li>
+                        <a href="#" title="Error Check and other Project Information">
+                            <span id="currprojtxt">Current Project:</span> <b class="calcchktxt">OK - Warning</b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" id="name_menu_item" title="Click to reload the project">
+                                    <span>Name: </span>
+                                    <span id="projectnamespan">
+                                        ABC Farms 2019 Budget
+                                    </span>
+                                    <b>
+                                    </b>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/CalculationCheck" title="Click to navigate to error details or click next line to (re)load project">
+                                    Error Check: <b class="calcchktxt">OK - Warning</b>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step1" title="Click to change">
+                                    <span>Type: </span>
+                                    <span id="projecttypespan">Analysis of Existing Company</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" href="#projCalcHelpModalDialog">
+                                    <text>Project Calculation Number: </text><span id="checksum">7bcee881-4/23/20</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects" title="Click to change">
+                                    <span>Horizon Years: </span>
+                                    <span id="projectyearsspan">3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="sendsupportbtn" target="_blank">Send Data File to ThruThink Support</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Edit</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="undobtn" href="#">Undo...  Ctrl+Z</a>
+                            </li>
+                            <li>
+                                <a id="redobtn" href="#">Redo...  Ctrl+Y</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a id="savebtn" href="#">Save  Ctrl+S</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a id="duplbtn" href="#">Create a copy of this project Ctrl+D</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" title="Projects List menu and other views" data-menu="Information">Information</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://app.thruthink.com/Projects?customVisibility=NoProjectNeeded&amp;SubTitle=List%20of%20Projects" title="Projects List menu and other views">List of Projects</a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" href="#dealReportModalDialog">e-mail Reports</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#infoModalDialog" title="Information Browser – Navigate to Source Page… Ctrl+I" data-toggle="modal">Information Browser – Navigate to Source Page… Ctrl+I</a>
+                            </li>
+                            <li>
+                                <a href="#helpModalDialog" title="Help Browser - Topic Discussion…  Ctrl+H" data-toggle="modal">Help Browser - Topic Discussion…  Ctrl+H</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/QuickViewResults" title="Quick View Results">Quick View Results</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/BusinessRatingCharts" title="Business Rating Charts">Business Rating Charts</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/EBITDADebtMultiple" title="Debt to EBITDA Multiples">Debt to EBITDA Multiples</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/ThruThinkDealScore" title="ThruThink Deal Score®">ThruThink Deal Score®</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/AnnualBudget" title="Annual Budget">Annual Budget</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/Forecast13Week" title="13 Week Forecast">13 Week Forecast</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/ProjectiontoActualSpread" title="Projection to actual Spreads">Projection to actual Spreads</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/BalanceSheet" title="Balance Sheet">Balance Sheet</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/IncomeStatementGen" title="Income Statement">Income Statement</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/SourcesandUsesofCash" title="Sources and Uses of Cash">Sources and Uses of Cash</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Step5/IndivItemAssetScheduleWDetail" title="Individually Scheduled Assets">Individually Scheduled Assets</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/TransactionSheetView" title="Transaction Sheet View">Transaction Sheet View</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Step6/IndivItemDebtScheduleWDetail" title="Individually Scheduled Debts">Individually Scheduled Debts</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/InternalRateofReturnSummary" title="Internal Rate of Return Summary">Internal Rate of Return Summary</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Step5/IndivSchedIncExp" title="Individually Scheduled Income/Expense">Individually Scheduled Income/Expense</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Projects/MonthlyCashFlowGraph?DividerBelow=True" title="Monthly Cash Flow Graph">Monthly Cash Flow Graph</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/TaxRates" title="Income Tax Rates">Income Tax Rates</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/ExitStrategy" title="Exit Strategy">Exit Strategy</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" title="Workflow Home with Steps" data-menu="Workflow">Workflow</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow?SubTitle=Workflow%20Home" title="Workflow Home with Steps">Workflow Home</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/QuickDealInput?DividerBelow=True" title="Quick Deal Input">Quick Deal Input</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/HistoricalWorksheet" title="Historical Worksheet">Historical Worksheet</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step1?DropDown=Disable" title="Step 1 - Type of Transaction">Step 1 - Type of Transaction</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step2?DropDown=Disable" title="Step 2 - Names and Effective Date">Step 2 - Names and Effective Date</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step3?DropDown=Disable">Step 3 - Income, Expense and EBITDA</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step4?DropDown=Disable" title="Step 4 - Purchase Price">Step 4 - Purchase Price</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step5?DropDown=Disable">Step  5 - Assets</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step6?DropDown=Disable">Step 6 - Debt</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step7?DropDown=Disable">Step 7 - Miscellaneous Information</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/Step8?DropDown=Disable">Step 8 - Equity Section </a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/SnapShotSummaryGen?DropDown=Disable&amp;DividerBelow=True" title="Finish and Review">Finish and Review</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://app.thruthink.com/Workflow/CashFlowControl" title="Cash Flow Control">Cash Flow Control</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" title="Admin Views" data-menu="Admin">Admin</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://app.thruthink.com/Admin?customVisibility=NoProjectNeeded&amp;SubTitle=Admin%20Views" title="Admin Views">Admin Views</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/Projects" title="Projects">Projects</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/Upgrades" title="Upgrades">Upgrades</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/SiteMap" title="SiteMap">SiteMap</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/ErrorSummarySheet" title="Error Summary Sheet">Error Summary Sheet</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/InputSheet" title="Input Sheet">Input Sheet</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/NameValuePairs" title="All range names and values">All range names and values</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/IndividuallyScheduledItems" title="Individually Scheduled Items">Individually Scheduled Items</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/ScheduledARIncExpYr1" title="Scheduled AR-Inc-Exp Yr1">Scheduled AR-Inc-Exp Yr1</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/ScheduledARIncExpYr2" title="Scheduled AR-Inc-Exp Yr2">Scheduled AR-Inc-Exp Yr2</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/ScheduledARIncExpYr3" title="Scheduled AR-Inc-Exp Yr3">Scheduled AR-Inc-Exp Yr3</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/AdministrationForm" title="Administration Form">Administration Form</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/WorkSheetCopytoCashFlow" title="WorkSheetCopytoCashFlow">WorkSheetCopytoCashFlow</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/UploadFileForCombinedTestForm?customVisibility=NoProjectNeeded" title="Upload File For Combined Project Test">Upload File For Combined Project Test</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/UploadFileFormatForm?customVisibility=NoProjectNeeded" title="Upload File Format">Upload File Format</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/UploadProjectForm?customVisibility=NoProjectNeeded" title="Upload Project">Upload Project</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/ManualPasswordResetForm?customVisibility=NoProjectNeeded" title="Manual Password Reset">Manual Password Reset</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/FreeRender?DividerBelow=True" title="Free Render">Free Render</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://app.thruthink.com/UsersAdmin" title="User Administration">User Administration</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/RolesAdmin" title="User Role Administration">User Role Administration</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Coupons" title="Coupon Management">Coupon Management</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/Admin/ProjectBackups" title="Backup Management">Backup Management</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/AccountTypes" title="Account Types">Account Types</a>
+                            </li>
+                            <li>
+                                <a href="https://app.thruthink.com/MarketRates" title="Market Rates">Market Rates</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="helpMenuItem">Help</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a data-toggle="modal" href="#helpModalDialog">Help Browser - Topic Discussion…  Ctrl+H</a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" href="#infoModalDialog">Information Browser – Navigate to Source Page…  Ctrl+I</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://app.thruthink.com/Home/Contact">Contact</a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" href="#navigationTipsModalDialog">Navigation Tips</a>
+                            </li>
+                            <li>
+                                <a href="#">Customer Use Policies <span class="caret navbar-toggle sub-arrow"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://app.thruthink.com/docs/ThruThink%20Terms%20of%20Service.pdf" target="_blank">Terms of Service</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://app.thruthink.com/docs/ThruThink%20Sub%20User%20TOS.pdf" target="_blank">Sub User TOS</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://app.thruthink.com/docs/ThruThink%20SLA.pdf" target="_blank">Service Level Agreement</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://app.thruthink.com/docs/ThruThink%20AUP.pdf" target="_blank">Acceptable Use Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://app.thruthink.com/docs/ThruThink%20Privacy%20Policy.pdf" target="_blank">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://app.thruthink.com/docs/ThruThink%20Cookie%20Policy.pdf" target="_blank">Cookie Policy</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a data-toggle="modal" href="#projCalcHelpModalDialog">Project Calculation Number</a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" href="#projStatusHelpModalDialog">Project Status-OK / Warning / Error</a>
+                            </li>
+                            <li>
+                                <a data-toggle="modal" href="#projSaveHelpModalDialog">Upon saving a Project</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form action="/Account/LogOff" class="navbar-right" id="logoutForm" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="loremipsum">
+                        <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" title="Account management related actions">csaba.toth.us</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="https://app.thruthink.com/Manage" title="Manage logged in as">Manage logged in user</a>
+                                </li>
+                                <li>
+                                    <a href="https://app.thruthink.com/Account/Renewal">Renew the current subscription</a>
+                                </li>
+                                <li>
+                                    <a href="https://app.thruthink.com/Account/Upgrade">Upgrade to another subscription type</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container body-content" id="mainbody">
+        <div id="content-wrap">
+            <div class="row outer-wrapper">
+                <div id="table-container" class="noFixedColumn">
+                    <table id="worksheet" border="0">
+                        <tbody>
+                            <tr>
+                                <td style="padding:0; margin: 0;">
+                                    <img src="img/gg4K.jpg">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <hr />
+            <p>
+                &copy; 2020 - <em>TT<sup class="footer-sm">&reg;</sup></em> Application - by Lorem Ipsum LLC
+                &mdash; <a href="TOS.pdf" target="_blank">Terms of Service</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smartmenus.js"></script>
+    <script src="js/jquery.smartmenus.bootstrap.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>
