@@ -57,7 +57,7 @@ $(document).ready(function () {
         $("head").append(
             $(document.createElement("style"))
                 .html(
-                    "#navbar-container { margin-left: unset; margin-right: unset; } " // +
+                    "#navbar-container { margin-left: unset; width: 97vw; } " // +
                     // "#navbar-container { width: 97vw; position: fixed; left: 0; top: 0; } " +
                     // "#navbar-container-container { position: fixed; left: 0; top: 0; }"
                 )
